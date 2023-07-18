@@ -1,0 +1,69 @@
+<style>
+  /* CSS */
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: skyblue;
+  }
+
+  h1 {
+    font-family: "Lilita One", cursive;
+    font-size: 6rem;
+    color: rgb(255, 82, 177);
+  }
+
+  #watermelon {
+    width: 40rem;
+    height: 20rem;
+    background-color: red;
+    border: 4rem solid green;
+    border-top: none;
+    border-bottom-left-radius: 30rem;
+    border-bottom-right-radius: 30rem;
+    box-shadow: 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.75);
+    position: relative;
+    transition: 0.5s;
+  }
+
+  #watermelon:hover {
+    transform: scale(1.1);
+  }
+
+  #watermelon > p {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 7% 93% 40% 60% / 7% 60% 40% 93%;
+    background-color: black;
+    position: absolute;
+    transform: rotate(0deg);
+    margin: 0;
+  }
+</style>
+
+<!-- HTML -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+  rel="stylesheet"
+/>
+<h1>~Watermelon~</h1>
+<div id="watermelon"></div>
+
+<script src="./seeds.js"></script>
+<script>
+  // JavaScript
+  // Generate seeds
+
+  for (seed of seeds) {
+    var seedElement = document.createElement("p");
+    seedElement.style.left = seed.x + "rem";
+    seedElement.style.top = seed.y + "rem";
+    seedElement.style.transform = "rotate(" + seed.rotation + "deg)";
+    console.log(seed);
+    watermelon.appendChild(seedElement);
+  }
+</script>

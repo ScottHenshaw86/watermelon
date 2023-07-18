@@ -46,67 +46,6 @@
     margin: 0;
   }
 
-  .bite {
-    position: relative;
-    z-index: 1;
-    visibility: hidden;
-  }
-
-  .bite:nth-of-type(1) {
-    top: 0;
-    left: 0;
-  }
-
-  .bite:nth-of-type(2) {
-    top: 0;
-    left: 8rem;
-  }
-
-  .bite:nth-of-type(3) {
-    top: 3rem;
-    left: 4rem;
-  }
-
-  .bite > p {
-    position: absolute;
-    background-color: skyblue;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-  }
-
-  .bite > p:nth-child(1) {
-    top: -2.5rem;
-    left: 2.4rem;
-  }
-
-  .bite > p:nth-child(2) {
-    top: -1.8rem;
-    left: 3.4rem;
-  }
-
-  .bite > p:nth-child(3) {
-    top: -1.2rem;
-    left: 4.8rem;
-  }
-
-  .bite > p:nth-child(4) {
-    top: -1.8rem;
-    left: 6.2em;
-  }
-
-  .bite > p:nth-child(5) {
-    top: -2.5rem;
-    left: 7.2rem;
-  }
-
-  .bite > p:nth-child(6) {
-    top: -4.4rem;
-    left: 3.5rem;
-    width: 5.5rem;
-    height: 5.5rem;
-  }
-
   @media screen and (max-width: 768px) {
     :root {
       font-size: 10px;
@@ -129,32 +68,7 @@
   rel="stylesheet"
 />
 <h1>~Watermelon~</h1>
-<div id="watermelon">
-  <div class="bite">
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-  </div>
-  <div class="bite">
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-  </div>
-  <div class="bite">
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-  </div>
-</div>
+<div id="watermelon"></div>
 
 <script src="./seeds.js"></script>
 <script>
@@ -169,13 +83,4 @@
     console.log(seed);
     watermelon.appendChild(seedElement);
   }
-
-  // Show bite when click on watermelon (max 3 bites)
-  const bites = document.querySelectorAll(".bite");
-  let biteNum = 0;
-  watermelon.onclick = function () {
-    if (biteNum > 2) return;
-    bites[biteNum].style.visibility = "visible";
-    biteNum++;
-  };
 </script>
